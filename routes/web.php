@@ -2,14 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Routing halaman beranda
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.beranda');
 });
 
-Route::get('/profil', function () {
-    return view('pages.profil');
-});
-
-Route::get('/home', function () {
-    return 'Selamat Pagi Dunia, 707082400133';
+// Routing halaman about
+Route::get('/about', function () {
+    return view('pages.about', [
+        'nama' => 'Zaki Syahrul Huda',
+        'kelas' => 'D4SM - 48 -02',
+        'nim' => '707082400133',
+    ]);
 });
